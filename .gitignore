@@ -1,0 +1,6 @@
+**.pytest_cache/
+venv_wirestock/
+**.DS_Store
+.idea/
+__pycache__/
+wirestock_data.csv
