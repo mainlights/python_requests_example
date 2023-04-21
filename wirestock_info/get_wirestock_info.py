@@ -64,10 +64,8 @@ def get_photo_info(token):
             break
 
     photos_status = Counter([media['status'] for media in photos_list])
-    accepted_photos_count = photos_status.get('accepted')
-    on_review_photos_count = photos_status.get('submitted')
-    if not on_review_photos_count:
-        on_review_photos_count = 0
+    accepted_photos_count = photos_status.get('accepted', 0)
+    on_review_photos_count = photos_status.get('submitted', 0)
 
     uploaded_photos = {
         'All media': len(photos_list),
