@@ -4,3 +4,4 @@ venv_wirestock/
 .idea/
 __pycache__/
 wirestock_data.csv
+.env

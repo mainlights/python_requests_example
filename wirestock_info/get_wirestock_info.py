@@ -1,10 +1,16 @@
+import os
 from collections import Counter
+from dotenv import load_dotenv
 
 import requests
 import csv
 
-from user import user_credentials
 
+load_dotenv()
+user_credentials = {
+        "username": os.getenv('USERNAME'),
+        "password": os.getenv('PASSWORD'),
+    }
 
 data_types = [
     'Platform', 'Type of media', 'All media', 'Accepted media', 'On review media', 'To revise', 'Rejected',
